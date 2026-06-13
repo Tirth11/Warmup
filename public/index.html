@@ -3,31 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Warmup App</title>
+  <title>Cal‑Cook – Product Requirements Document</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Warmup – a sleek showcase of the Android app, now available as a web preview.">
+  <meta name="description" content="Full PRD for Cal‑Cook, a calendar‑driven meal planning and cooking execution app.">
 </head>
 <body>
   <header>
-    <h1>Warmup App</h1>
+    <h1>Cal‑Cook – Product Requirements Document</h1>
   </header>
   <main>
-    <section class="hero">
-      <img src="https://via.placeholder.com/800x400?text=Warmup+App" alt="Warmup App preview" />
-      <p class="tagline">Experience the Warmup app concept directly in the browser.</p>
-      <a class="download-btn" href="#">Download Android APK (coming soon)</a>
+    <section class="section">
+      <h2>Product Overview</h2>
+      <p>Cal‑Cook is a calendar‑synced meal‑planning and cooking‑execution app that reads the user’s day, understands available time windows, and converts that into a realistic meal plan plus a timeline‑based cooking to‑do list. The core promise: <em>“Tell me what my day looks like, what I have at home, and what I can spend — then give me a feasible cooking plan.”</em></p>
     </section>
-    <section class="features">
-      <h2>Features</h2>
+
+    <section class="section">
+      <h2>Goals & Success Metrics</h2>
       <ul>
-        <li>Modern UI with glassmorphism effects</li>
-        <li>Responsive layout for all devices</li>
-        <li>Simple, fast, and lightweight</li>
+        <li>Plan acceptance rate ≥ 80 % after first morning sync.</li>
+        <li>Budget adherence rate ≥ 85 %.</li>
+        <li>Average time to generate a daily plan ≤ 3 seconds.</li>
+        <li>User‑retention after 30 days ≥ 70 %.</li>
       </ul>
+    </section>
+
+    <section class="section">
+      <h2>Personas</h2>
+      <ul>
+        <li><strong>Busy Professional</strong> – needs quick meals that fit a tight calendar.</li>
+        <li><strong>Family Organizer</strong> – coordinates meals for multiple household members.</li>
+        <li><strong>Health‑conscious Planner</strong> – tracks nutrition and budget.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>End‑to‑End User Journey</h2>
+      <ol>
+        <li>Onboarding – account creation, calendar connection, profile & budget setup.</li>
+        <li>Morning sync – app reads today’s calendar, builds a feasibility model.</li>
+        <li>Plan generation – recipes, cost, time, and substitution suggestions.</li>
+        <li>Grocery list creation – pantry‑aware aggregation.</li>
+        <li>Cooking timeline – auto‑scheduled tasks aligned with free windows.</li>
+        <li>Execution – notifications, timers, and on‑the‑fly pivots.</li>
+        <li>Learning – feedback loop improves future recommendations.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Feature Modules</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Module</th>
+            <th>End‑to‑End Functionality</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>User account</td><td>Sign‑up, login, guest mode, profile, timezone, locale, household size, primary cook, dependents.</td></tr>
+          <tr><td>Calendar integration</td><td>Connect Google/Apple calendar, permission management, sync frequency, manual fallback.</td></tr>
+          <tr><td>Preferences baseline</td><td>Diet type, allergens, disliked foods, cuisine preferences, cooking skill, appliance access, weekday/weekend preferences.</td></tr>
+          <tr><td>Pantry baseline</td><td>Item list, staple defaults, quantity confidence, expiry dates, barcode/manual entry, always‑available staples.</td></tr>
+          <tr><td>Budget setup</td><td>Daily/weekly/monthly budget, per‑meal cap, strict/flexible mode, currency selection.</td></tr>
+          <tr><td>Recipe & meal engine</td><td>Breakfast/lunch/dinner generation, snack logic, prep‑time filters, serving scaling, leftovers, nutrition metadata, tags.</td></tr>
+          <tr><td>Schedule intelligence</td><td>Detect free windows, commute blocks, work intensity, travel days, late evenings, lunch constraints.</td></tr>
+          <tr><td>Plan generation</td><td>Produce day plan, estimate prep/cook/eat time, map meals to slots, explain choices, allow regeneration.</td></tr>
+          <tr><td>Grocery engine</td><td>Consolidated list, aisle grouping, pantry subtraction, quantity scaling, manual edits, purchase status, store mode.</td></tr>
+          <tr><td>Budget feasibility engine</td><td>Ingredient‑level cost, per‑serving cost, budget warnings, cheap‑swap suggestions, savings messaging.</td></tr>
+          <tr><td>Cooking to‑do list</td><td>Chronological tasks, prep‑ahead reminders, lunch assembly, dinner start alerts, active timers, calendar integration.</td></tr>
+          <tr><td>Substitution engine</td><td>Ingredient, time‑crunch, appliance, budget, dietary‑safe substitutions.</td></tr>
+          <tr><td>Notifications</td><td>Morning sync summary, grocery reminder, prep reminder, dinner‑start alert, plan‑change alerts.</td></tr>
+          <tr><td>Learning & history</td><td>Meal history, favorites, repeats, hidden meals, budget accuracy feedback, pantry accuracy learning, schedule‑fit feedback.</td></tr>
+          <tr><td>Social / family</td><td>Shared plan, shared grocery list, partner approval, task assignment, family calendar mode.</td></tr>
+          <tr><td>Admin / content ops</td><td>Recipe catalog, ingredient master, substitution rules, pricing source, notification templates, analytics dashboards.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Screen Inventory (Consumer)</h2>
+      <ul>
+        <li>Splash / Auth</li>
+        <li>Welcome / Value proposition</li>
+        <li>Calendar connection</li>
+        <li>Household & Dietary setup</li>
+        <li>Budget setup</li>
+        <li>Pantry setup</li>
+        <li>Notification preference</li>
+        <li>Home dashboard (widgets)</li>
+        <li>Today plan summary</li>
+        <li>Daily timeline view</li>
+        <li>Meal detail</li>
+        <li>Recipe detail</li>
+        <li>Grocery list</li>
+        <li>Pantry screen</li>
+        <li>Budget dashboard</li>
+        <li>Swap / Substitution modal</li>
+        <li>Emergency pivot screen</li>
+        <li>History & Favorites</li>
+        <li>Settings & Integrations</li>
+        <li>Help & Feedback</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Backend Services</h2>
+      <ul>
+        <li>Auth service</li>
+        <li>User profile service</li>
+        <li>Calendar sync service</li>
+        <li>Event parsing & schedule classifier</li>
+        <li>Recipe recommendation engine</li>
+        <li>Pantry inventory service</li>
+        <li>Pricing & budget service</li>
+        <li>Grocery list generation service</li>
+        <li>Task orchestration service</li>
+        <li>Notification service</li>
+        <li>Feedback & learning service</li>
+        <li>Analytics & experimentation service</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>MVP Scope</h2>
+      <ul>
+        <li>Sign‑up & onboarding (Google login, calendar connect)</li>
+        <li>Dietary & budget setup</li>
+        <li>Basic pantry entry</li>
+        <li>Daily breakfast/lunch/dinner generation</li>
+        <li>Grocery list generation (pantry aware)</li>
+        <li>Budget feasibility check with cheap‑swap suggestions</li>
+        <li>Timeline‑based cooking to‑do list</li>
+        <li>Push notifications for prep & dinner</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>User Stories & Acceptance Criteria (sample)</h2>
+      <h3>As a Busy Professional, I want the app to generate a dinner plan that fits my 6 pm‑7 pm free slot.</h3>
+      <ul>
+        <li>Given a calendar event from 6 pm‑7 pm marked as “Free”, when I open the app after morning sync, the system should propose a dinner recipe whose total prep + cook time ≤ 60 minutes.</li>
+        <li>Acceptance: The suggested recipe’s estimated time is shown, and the cooking task list schedules the first step at ≤ 6:00 pm.</li>
+      </ul>
+      <h3>As a Family Organizer, I want to share the grocery list with my partner.</h3>
+      <ul>
+        <li>When I invite a household member via email, they receive a link granting “edit” permission on the grocery list.</li>
+        <li>Acceptance: Both users see real‑time updates; changes made by either user are reflected within 2 seconds.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Analytics & KPIs</h2>
+      <ul>
+        <li>Calendar connected events</li>
+        <li>Daily plan generated</li>
+        <li>Meal swaps per user</li>
+        <li>Budget exceedance rate</li>
+        <li>Grocery list export count</li>
+        <li>Task completion rate</li>
+        <li>Panic‑button usage</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Future Phases</h2>
+      <p>Phase 2 adds Apple Calendar sync, shared household planning, barcode pantry scanning, weekly planning, nutrition goals, voice‑assistant integration. Phase 3 expands to grocery‑delivery integration, wearable sync, AI cooking coach, seasonal pricing optimization.</p>
     </section>
   </main>
   <footer>
-    <p>&copy; 2026 Warmup. All rights reserved.</p>
+    <p>&copy; 2026 Cal‑Cook – All rights reserved.</p>
   </footer>
 </body>
 </html>
