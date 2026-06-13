@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Central Plate Circle inside the safe 66dp zone (centered around 54, 54) -->
+    <path
+        android:fillColor="#E8F5E9"
+        android:pathData="M54,24 A30,30 0 1,1 53.9,24 Z" />
+        
+    <!-- Plate Inner Ring -->
+    <path
+        android:strokeColor="#A5D6A7"
+        android:strokeWidth="1.5"
+        android:fillColor="#00000000"
+        android:pathData="M54,29 A25,25 0 1,1 53.9,29 Z" />
+
+    <!-- Calendar Grid Icon Overlay on the plate -->
+    <!-- Calendar Body outline -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,42 h24 v20 h-24 Z" />
+        
+    <!-- Calendar Top Red accent slice -->
+    <path
+        android:fillColor="#FF8A65"
+        android:pathData="M42,42 h24 v4 h-24 Z" />
+        
+    <!-- Fork on Lefthand side of the plate -->
+    <!-- Fork head -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,40 h6 v12 h-6 Z M17,40 v5 M19,40 v5 M21,40 v5 M19,52 v14 h1" />
+        
+    <!-- Knife on Righthand side of the plate -->
+    <!-- Knife Blade -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M86,39 c-2,0 -4,4 -4,11 v3 h4 Z M84,53 v13 h1" />
+        
+</vector>

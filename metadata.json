@@ -1,0 +1,6 @@
+{
+  "name": "Cal-Cook",
+  "description": "The Calendar-Synced Meal Planner, Smart Groceries, and Budget Manager.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
